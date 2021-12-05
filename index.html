@@ -14,18 +14,20 @@
         background-color: #333333;
       }
       #container {
-        width: 100vw;
+        width: 1150px;
         margin: 0 auto;
+        margin-bottom: 0px;
       }
       #banner {
+        display: flex;
         position: relative;
         background: url("https://pic.imgdb.cn/item/61ab4ee02ab3f51d915efb84.jpg")
           no-repeat;
-        background-size: auto 100%;
+        background-size: 100% auto;
         width: 100%;
         height: 400px;
         overflow: hidden;
-        background-position: -130px 0px;
+        background-position: 0px -80px;
       }
       #divText {
         position: absolute;
@@ -48,10 +50,6 @@
         background-color: white;
         box-sizing: border-box;
       }
-      #video {
-        width: 100%;
-        background-color: #333;
-      }
       img {
         width: 100%;
       }
@@ -64,13 +62,23 @@
         line-height: 100px;
         letter-spacing: 2px;
       }
+      @media screen and (max-width: 991px) {
+        #divText div {
+          width: 100%;
+          height: 21px;
+          margin: 100px auto;
+          text-align: center;
+          color: white;
+          font-size: 21px;
+          font-weight: 500;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="container">
       <div id="banner">
         <div id="divText">
-          <!-- <div> </div> -->
           <div>
             <span>时间：2021-12-9</span
             >&nbsp;&nbsp;&nbsp;<span>15:30</span>&nbsp;&nbsp;&nbsp;
@@ -79,11 +87,7 @@
         </div>
       </div>
       <div id="body">
-        <div id="video">
-          <video width="100%" controls="controls">
-            <source src="image/video.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <video src="../video.mp4" controls style="width: 100%"></video>
         <img src="https://pic.imgdb.cn/item/61ab4f992ab3f51d915f6701.jpg" />
         <img src="https://pic.imgdb.cn/item/61ab73bf2ab3f51d9174f725.jpg" />
         <img src="https://pic.imgdb.cn/item/61ab73bf2ab3f51d9174f72b.jpg" />
